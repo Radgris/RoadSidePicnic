@@ -1,7 +1,5 @@
  #include "colors.inc"
- #include "stars.inc"  
- #include "stars.inc"  
- 
+ #include "stars.inc"
  
    camera{
     location <0, 2, -10>
@@ -39,7 +37,7 @@
   
   fog {
     distance 150
-    color rgbt<0.3, 0.5, 0.2, 1>
+    color rgb<0.3, 0.5, 0.2>
     fog_type 2
     fog_offset 25
     fog_alt 1
@@ -48,7 +46,7 @@
   }
   fog {
     distance 150
-    color rgbt<0.5, 0.1, 0.1, 1>
+    color rgb<0.5, 0.1, 0.1>
     fog_type 2
     fog_offset 15
     fog_alt 4
@@ -57,18 +55,19 @@
   }
   fog {
     distance 150
-    color rgbt<0.1, 0.1, 0.6, 1>
+    color rgb<0.1, 0.1, 0.6>
     fog_type 2
     fog_offset 10
     fog_alt 2
   }
     
- 
-
+                  
+                  
+                  
+                    
+ /*
 sphere{ <0,0,0>, 1
-        texture{ Starfield1 scale 0.1
+        texture{ Starfield scale 0.1
                } // end of texture
-        scale 10000
- }                   
-                  
-                  
+        scale 100
+ }   */
