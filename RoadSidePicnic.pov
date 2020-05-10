@@ -29,8 +29,14 @@
     height_field {
     tga "image.tga"
     smooth
-    //pigment { White }
-    texture {Sandalwood}
+    pigment {
+        image_map
+          { 
+          tga "montanas.tga"
+          map_type 0
+          }
+    }
+    //texture {Cherry_Wood}
     translate <-.5, -.45, 1>
     scale <60, 9, 3>
   }     
@@ -38,7 +44,13 @@
     height_field {
     tga "image.tga"
     smooth
-    pigment { White }
+    pigment {
+        image_map
+          { 
+          tga "montanas.tga"
+          map_type 5
+          }
+    }
     translate <-.5, -.45, -6>
     scale <30, 2, 1>
   } 
