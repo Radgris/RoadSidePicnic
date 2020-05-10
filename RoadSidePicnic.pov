@@ -1,7 +1,7 @@
  #include "colors.inc"
  #include "stars.inc"  
  #include "stars.inc"  
- 
+ #include "textures.inc"
  
    camera{
     location <0, 2, -10>
@@ -15,24 +15,26 @@
     height_field {
     tga "image.tga"
     smooth
-    pigment { Blue }
-    translate <-.5, -.5, -.5>
+    pigment {transmit 0.5}
+    texture {Water}
+    translate <-.5, -.4, -.8>
     scale <19, .25, 17>
   }     
     //Mountain
     height_field {
     tga "image.tga"
     smooth
-    pigment { White }
-    translate <-.5, -.5, 1>
-    scale <30, 7, 3>
+    //pigment { White }
+    texture {Sandalwood}
+    translate <-.5, -.45, 1>
+    scale <60, 9, 3>
   }     
     //Shore
     height_field {
     tga "image.tga"
     smooth
     pigment { White }
-    translate <-.5, -.5, -6>
+    translate <-.5, -.45, -6>
     scale <30, 2, 1>
   } 
   //fog
