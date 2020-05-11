@@ -6,9 +6,11 @@
 #include "glass.inc"
 #include "metals.inc"
 #include "woods.inc"
+#include "Tree test 1.inc"
+#include "Tree test 2.inc"
  
    camera{
-    location <0, 2, -10>
+    location <0, 1.7, -10>
     //location <5, 10, -20>  //Test view, erase after project is complete
     look_at 0
     angle 30
@@ -117,7 +119,34 @@ cone {
     scale <.2,.2,.2>
     pigment { Green }
 }          
+            
+//Declare 1st tree
+#declare HEIGHT1 = default13_1_height * 1.3;
+#declare WIDTH1 = HEIGHT1*2;
+#declare arbol1union = union { 
+             object { default13_1_stems
+                    texture{Cherry_Wood} }
+             object { default13_1_leaves
+                    texture { pigment {Red} 
+                              finish { ambient 0.15 diffuse 0.8 }}}
+             rotate -90*y
+              }
+#declare arbol1 = object {arbol1union scale 0.13}                          
+            
+//Declare 2nd tree
+#declare HEIGHT2 = default13_2_height * 1.3;
+#declare WIDTH2 = HEIGHT2*2;
+#declare arbol2union = union { 
+         object { default13_2_stems
+                texture{Cherry_Wood}}
+         object { default13_2_leaves
+                texture { pigment {Red} 
+                          finish { ambient 0.15 diffuse 0.8 }}}
+         rotate 90*y }  
+#declare arbol2 = object {arbol2union scale 0.1}
 
+                     
+            
  /* Dron, hay que descomentar para render final 
  
 //Spaceship construction
@@ -230,3 +259,9 @@ cone {
 object { shipRotated translate <-1,0.2,-2>}                       
 
 */ //final del comentario del dron
+  
+  
+//Trees summoning
+
+object{arbol1 translate <-1,0,-5.5>}
+object{arbol2 translate <1,0,-5.5>}
